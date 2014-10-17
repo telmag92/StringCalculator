@@ -8,7 +8,7 @@ public class Calculator{
 
         if(numbers.equals("")) return 0;
         
-        else if(numbers.contains(",")){
+        else if(numbers.contains(",") || numbers.contains("\n")){
             return sum(splitNumbers(numbers));
         }
        
@@ -34,7 +34,7 @@ public class Calculator{
 		    arr.add(number);
 		}
             else
-		total += Integer.parseInt(number);
+		if (Integer.parseInt(number) <= 1000) total += Integer.parseInt(number);
 	}
             
             

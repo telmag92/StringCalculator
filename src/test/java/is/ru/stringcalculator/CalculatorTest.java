@@ -72,4 +72,11 @@ public class CalculatorTest{
         }
     }
 
+    @Test
+    public void testBigNumbers(){
+	assertEquals(2, Calculator.Add("1001,2"));
+	
+	assertEquals(5, Calculator.Add("2002\n5"));
+    }
+
 }
