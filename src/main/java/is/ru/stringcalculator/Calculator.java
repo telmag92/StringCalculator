@@ -5,8 +5,10 @@ public class Calculator{
 
     public static int Add(String numbers){
 	
-	if(numbers.isEmpty()){return 0;}
 	
+	if(numbers.equals("")){return 0;}
+	if(numbers.contains(",")){}
+        else{return Integer.parseInt(numbers);}
 	
 
 	return 10;

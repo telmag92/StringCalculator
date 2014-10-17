@@ -12,12 +12,14 @@ public class CalculatorTest{
     }
 
     @Test
-    public void testEmptyString(){
+    public void testEmptyString(){assertEquals(0, Calculator.Add(""));}
 
-	assertEquals(0, Calculator.Add(""));
+    @Test
+    public void test1number(){
+	assertEquals(1, Calculator.Add("1"));
 
-}
-
+	assertEquals(10, Calculator.Add("10"));
+    }
 
 
 
