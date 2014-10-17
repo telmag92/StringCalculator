@@ -92,4 +92,12 @@ public class CalculatorTest{
 	assertEquals(14, Calculator.Add("//[;;;]\n3;;;6;;;5"));
 	assertEquals(10, Calculator.Add("//[::]\n2::7::1"));
     } 
+
+    @Test
+    public void testMultipleDelimeters(){
+
+	assertEquals(10, Calculator.Add("//[ppp][y][ee]\n1y2ppp3ee4"));
+	assertEquals(19, Calculator.Add("//[;;;][;;][::]\n2;;;3;;4::10"));
+    
+    }
 }
