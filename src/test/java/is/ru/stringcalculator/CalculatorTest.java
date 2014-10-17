@@ -26,7 +26,10 @@ public class CalculatorTest{
 	assertEquals(3, Calculator.Add("1,2"));
     }
 
-
+    @Test
+    public void testMultipleNumbers(){
+	assertEquals(6, Calculator.Add("1,2,3"));
+    }
 
 
 
