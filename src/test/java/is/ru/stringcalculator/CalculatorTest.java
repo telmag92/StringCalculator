@@ -85,4 +85,11 @@ public class CalculatorTest{
 	assertEquals(3, Calculator.Add("//:\n1:2"));
 	assertEquals(8, Calculator.Add("//;\n1;2;5"));
     }
+
+    @Test
+    public void testDelimetersOfAnyLength(){ 
+
+	assertEquals(14, Calculator.Add("//[;;;]\n3;;;6;;;5"));
+	assertEquals(10, Calculator.Add("//[::]\n2::7::1"));
+    } 
 }
