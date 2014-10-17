@@ -21,6 +21,11 @@ public class CalculatorTest{
 	assertEquals(10, Calculator.Add("10"));
     }
 
+    @Test
+    public void testTwoNumbers() {
+	assertEquals(3, Calculator.Add("1,2"));
+    }
+
 
 
 
