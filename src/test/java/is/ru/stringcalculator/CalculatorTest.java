@@ -31,6 +31,11 @@ public class CalculatorTest{
 	assertEquals(6, Calculator.Add("1,2,3"));
     }
 
-
+    @Test
+    public void testEmptyLinesBetweenNumbers(){
+	
+	assertEquals(8, Calculator.Add("1\n2,4\n1"));
+	assertEquals(8, Calculator.Add("1,4\n3"));
+    }
 
 }
