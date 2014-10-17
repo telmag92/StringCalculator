@@ -37,5 +37,39 @@ public class CalculatorTest{
 	assertEquals(8, Calculator.Add("1\n2,4\n1"));
 	assertEquals(8, Calculator.Add("1,4\n3"));
     }
+    
+    @Test
+    public void testNegativeNumbers(){
+
+	try{
+	    Calculator.Add("-1,4,-5,3");
+
+	    
+	}
+	catch(Exception e){
+	    assertEquals("Negatives not allowed: -1, -5", e.getMessage());
+	    
+	}
+
+	try{
+            Calculator.Add("-1,2");
+
+
+        }
+	catch(Exception e){
+            assertEquals("Negatives not allowed: -1", e.getMessage());
+
+	}
+	
+	try{
+            Calculator.Add("-1");
+
+
+        }
+        catch(Exception e){
+            assertEquals("Negatives not allowed: -1", e.getMessage());
+
+        }
+    }
 
 }
