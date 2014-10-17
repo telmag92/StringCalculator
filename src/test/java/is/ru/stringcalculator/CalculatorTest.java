@@ -31,8 +31,8 @@ public class CalculatorTest{
 	assertEquals(6, Calculator.Add("1,2,3"));
     }
 
-    @Test
-    public void testEmptyLinesBetweenNumbers(){
+     @Test
+    public void testNewLineBetweenNumbers(){
 	
 	assertEquals(8, Calculator.Add("1\n2,4\n1"));
 	assertEquals(8, Calculator.Add("1,4\n3"));
@@ -79,4 +79,10 @@ public class CalculatorTest{
 	assertEquals(5, Calculator.Add("2002\n5"));
     }
 
+    @Test
+    public void testAnotherDelimiter(){
+
+	assertEquals(3, Calculator.Add("//:\n1:2"));
+	assertEquals(8, Calculator.Add("//;\n1;2;5"));
+    }
 }
