@@ -12,7 +12,10 @@ public class CalculatorTest{
     }
 
     @Test
-    public void testEmptyString(){assertEquals(0, Calculator.Add(""));}
+    public void testEmptyString(){
+	assertEquals(0, Calculator.Add(""));
+
+    }
 
     @Test
     public void test1number(){
@@ -98,6 +101,17 @@ public class CalculatorTest{
 
 	assertEquals(10, Calculator.Add("//[ppp][y][ee]\n1y2ppp3ee4"));
 	assertEquals(19, Calculator.Add("//[;;;][;;][::]\n2;;;3;;4::10"));
-    
+	assertEquals(15, Calculator.Add("//[rrr][!][;][::]\n3rrr2!1;5::4"));;
+
+
+    }
+
+    @Test
+    public void testSpecialCharacters(){
+	
+	assertEquals(19, Calculator.Add("//[***][?]\n2?3***4?10"));
+	assertEquals(29, Calculator.Add("//[\n][***][//]\n4\n7//8***10"));
+	assertEquals(13, Calculator.Add("//[**][???][!!!!][.]\n1???4!!!!6.**2"));
+
     }
 }
